@@ -1,7 +1,7 @@
 {
   "name": "commitground-tools-app",
   "version": "0.1.0",
-  "description": "Tools for commitground",
+  "description": "Basic tools to work for commitground",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/commitground/work-tools.git"
+    "url": "git+https://github.com/commitground/commitground-work-tools.git"
   },
   "keywords": [
     "Commitground",
@@ -27,9 +27,9 @@
     "electron-packager": "^12.1.0"
   },
   "bugs": {
-    "url": "https://github.com/commitground/work-tools/issues"
+    "url": "https://github.com/commitground/commitground-work-tools/issues"
   },
-  "homepage": "https://github.com/commitground/work-tools#README.md",
+  "homepage": "https://github.com/commitground/commitground-work-tools#README.md",
   "dependencies": {
     "electron-localshortcut": "^3.1.0",
     "electron-tabs": "^0.9.1"
