@@ -4,7 +4,7 @@ Basic tools to work for commitground
 
 ## Download
 
-[Go to download application](releases)
+[Go to download application](https://github.com/commitground/commitground-work-tools/releases)
 
 ## Build
 
