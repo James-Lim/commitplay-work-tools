@@ -91,15 +91,15 @@ const goToTabByPosition = (position) => () => {
 let win = remote.getCurrentWindow()
 electronLocalshortcut.register(win, 'Ctrl+Tab', goToNextTab);
 electronLocalshortcut.register(win, 'Ctrl+Shift+Tab', goToPrevTab);
-electronLocalshortcut.register(win, 'Ctrl+1', goToTabByPosition(1));
-electronLocalshortcut.register(win, 'Ctrl+2', goToTabByPosition(2));
-electronLocalshortcut.register(win, 'Ctrl+3', goToTabByPosition(3));
-electronLocalshortcut.register(win, 'Ctrl+4', goToTabByPosition(4));
-electronLocalshortcut.register(win, 'Ctrl+5', goToTabByPosition(5));
-electronLocalshortcut.register(win, 'Ctrl+6', goToTabByPosition(6));
-electronLocalshortcut.register(win, 'Ctrl+7', goToTabByPosition(7));
-electronLocalshortcut.register(win, 'Ctrl+8', goToTabByPosition(8));
-electronLocalshortcut.register(win, 'Ctrl+9', goToTabByPosition(9));
-electronLocalshortcut.register(win, 'Ctrl+0', goToTabByPosition(-1));
-electronLocalshortcut.register(win, 'Ctrl+PageUp', goToPrevTab);
-electronLocalshortcut.register(win, 'Ctrl+PageDown', goToNextTab);
+electronLocalshortcut.register(win, 'CmdOrCtrl+1', goToTabByPosition(1));
+electronLocalshortcut.register(win, 'CmdOrCtrl+2', goToTabByPosition(2));
+electronLocalshortcut.register(win, 'CmdOrCtrl+3', goToTabByPosition(3));
+electronLocalshortcut.register(win, 'CmdOrCtrl+4', goToTabByPosition(4));
+electronLocalshortcut.register(win, 'CmdOrCtrl+5', goToTabByPosition(5));
+electronLocalshortcut.register(win, 'CmdOrCtrl+6', goToTabByPosition(6));
+electronLocalshortcut.register(win, 'CmdOrCtrl+7', goToTabByPosition(7));
+electronLocalshortcut.register(win, 'CmdOrCtrl+8', goToTabByPosition(8));
+electronLocalshortcut.register(win, 'CmdOrCtrl+9', goToTabByPosition(9));
+electronLocalshortcut.register(win, 'CmdOrCtrl+0', goToTabByPosition(-1));
+electronLocalshortcut.register(win, 'CmdOrCtrl+PageUp', goToPrevTab);
+electronLocalshortcut.register(win, 'CmdOrCtrl+PageDown', goToNextTab);
