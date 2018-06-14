@@ -38,7 +38,7 @@ after_success:
       echo "on develop branch";
       PREV_RC=$(git tag -l "v$CURRENT_VERSION-rc*" | tail -1);
       if [ $PREV_RC ]; then
-        export TRAVIS_TAG=v$(semver -i $PREV_RC prerelease --preid rc);
+        export TRAVIS_TAG=v$(semver $PREV_RC -i prerelease --preid rc);
       else
         export TRAVIS_TAG=v$(semver $CURRENT_VERSION-rc.1);
       fi;
