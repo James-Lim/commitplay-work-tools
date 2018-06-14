@@ -1,15 +1,15 @@
 {
   "name": "commitplay-tools-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Basic tools to work for commitplay",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "test": "mocha",
     "build": "npm run package-mac; npm run package-win; npm run package-linux",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=builds",
-    "package-win": "electron-packager . commitplay-tools-app --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=builds --version-string.CompanyName=commitplay --version-string.FileDescription=commitplay --version-string.ProductName=\"Commitplay Tools\"",    
+    "package-win": "electron-packager . commitplay-tools-app --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=builds --version-string.CompanyName=commitplay --version-string.FileDescription=commitplay --version-string.ProductName=\"Commitplay Tools\"",
     "package-linux": "electron-packager . commitplay-tools-app --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/128x128.png --prune=true --out=builds"
-
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,9 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.0",
-    "electron-packager": "^12.1.0"
+    "electron-packager": "^12.1.0",
+    "mocha": "^5.2.0",
+    "spectron": "^3.8.0"
   },
   "bugs": {
     "url": "https://github.com/commitplay/commitplay-work-tools/issues"
