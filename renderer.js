@@ -2,9 +2,8 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const TabGroup = require("electron-tabs");
-const {remote} = require('electron')
+const {remote, shell} = require('electron')
 const electronLocalshortcut = require('electron-localshortcut');
-
 
 let tabGroup = new TabGroup({
 });
@@ -19,7 +18,7 @@ let asana = tabGroup.addTab({
 
 let mail = tabGroup.addTab({
     title: "Mail",
-    src: "https://mail.google.com/a/commitground.com",
+    src: "https://mail.commitplay.io",
     visible: true,
     active: false,
     closable: false
@@ -28,7 +27,7 @@ let mail = tabGroup.addTab({
 
 let slack = tabGroup.addTab({
     title: "Slack",
-    src: "https://commitground.slack.com",
+    src: "https://commitplay.slack.com",
     visible: true,
     active: false,
     closable: false
@@ -36,7 +35,7 @@ let slack = tabGroup.addTab({
 
 let calendar = tabGroup.addTab({
     title: "Calendar",
-    src: "https://calendar.google.com/a/commitground.com",
+    src: "https://calendar.commitplay.io",
     visible: true,
     active: false,
     closable: false
@@ -44,7 +43,7 @@ let calendar = tabGroup.addTab({
 
 let drive = tabGroup.addTab({
     title: "Drive",
-    src: "https://drive.google.com/a/commitground.com",
+    src: "https://drive.commitplay.io",
     visible: true,
     active: false,
     closable: false
@@ -52,7 +51,15 @@ let drive = tabGroup.addTab({
 
 let pingboard = tabGroup.addTab({
     title: "Pingboard",
-    src: "https://commitground.pingboard.com",
+    src: "https://commitplay.pingboard.com",
+    visible: true,
+    active: false,
+    closable: false
+});
+
+let groups = tabGroup.addTab({
+    title: "Groups",
+    src: "https://groups.commitplay.io",
     visible: true,
     active: false,
     closable: false
@@ -87,6 +94,14 @@ const goToPrevTab = () => {
 const goToTabByPosition = (position) => () => {
     tabGroup.getTabByPosition(position).activate();
 }
+
+tabGroup.getTabs().forEach(tab => {
+  tab.webview.addEventListener('new-window', (event, url, frameName, disposition, options, additionalFeatures) => {
+    alert(url);
+    console.log(event)
+    shell.openExternal(event.url);
+  });
+});
 
 let win = remote.getCurrentWindow()
 electronLocalshortcut.register(win, 'Ctrl+Tab', goToNextTab);
