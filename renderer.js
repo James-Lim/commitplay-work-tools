@@ -50,25 +50,9 @@ let drive = tabGroup.addTab({
   closable: false
 });
 
-let github = tabGroup.addTab({
-  title: "Github",
-  src: "https://github.com/commitplay",
-  visible: true,
-  active: false,
-  closable: false
-});
-
 let wiki = tabGroup.addTab({
   title: "Wiki",
   src: "https://github.com/commitplay/wiki/wiki",
-  visible: true,
-  active: false,
-  closable: false
-});
-
-let pingboard = tabGroup.addTab({
-  title: "Pingboard",
-  src: "https://commitplay.pingboard.com",
   visible: true,
   active: false,
   closable: false
@@ -85,6 +69,30 @@ let groups = tabGroup.addTab({
 let responsibilityMap = tabGroup.addTab({
   title: "Responsibilities",
   src: "https://app.asana.com/0/688867783724848/board",
+  visible: true,
+  active: false,
+  closable: false
+});
+
+let pingboard = tabGroup.addTab({
+  title: "Pingboard",
+  src: "https://commitplay.pingboard.com",
+  visible: true,
+  active: false,
+  closable: false
+});
+
+let github = tabGroup.addTab({
+  title: "Github",
+  src: "https://github.com/commitplay",
+  visible: true,
+  active: false,
+  closable: false
+});
+
+let aws = tabGroup.addTab({
+  title: "AWS",
+  src: "https://commitplay.signin.aws.amazon.com/console",
   visible: true,
   active: false,
   closable: false
